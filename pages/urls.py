@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import homePageView, aboutPageView, delainePageView, homePost, results
+from .views import homePageView, aboutPageView, delainePageView, homePost, results, todos
 
 urlpatterns = [
     path('', homePageView, name='home'),
@@ -7,4 +7,5 @@ urlpatterns = [
     path('delaine/', delainePageView, name='delaine'),
     path('homePost/', homePost, name='homePost'),
     path('results/<int:choice>/<str:gmat>/', results, name='results'),
+    path('todos', todos, name='todos')
 ]
