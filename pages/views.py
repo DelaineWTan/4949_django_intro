@@ -81,6 +81,6 @@ def todos(request):
     print("*** Inside todos()")
     items = Item.objects
     itemErrandDetail = items.select_related('todolist')
-    print(itemErrandDetail[0].todolist.name)
+    print(itemErrandDetail[0].id)
     return render(request, 'ToDoItems.html',
                   {'ToDoItemDetail': itemErrandDetail})
